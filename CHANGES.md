@@ -1,5 +1,9 @@
 # azure-graphapi change log
 
+## Version 0.1.0
+
+- Set the default Graph API version to 1.6.
+
 ## Version 0.0.9
 
 - Accept a Buffer as request data.

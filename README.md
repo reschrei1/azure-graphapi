@@ -2,7 +2,7 @@
 
 Node.js package for making Azure Active Directory Graph API calls
 
-v0.0.9
+v0.1.0
 
 ## Installation
 
@@ -39,7 +39,7 @@ This section describes the constructor returned by this module and the available
 
 #### GraphAPI(tenant, clientId, clientSecret, [apiVersion])
 
-Creates a new `GraphAPI` instance. If the `apiVersion` is not specified, it defaults to version 1.5.
+Creates a new `GraphAPI` instance. If the `apiVersion` is not specified, it defaults to version 1.6.
 
 ```javascript
 var GraphAPI = require('azure-graphapi');
@@ -115,7 +115,7 @@ Performs an HTTPS GET request and accumulates all objects having the specified `
 
 (The MIT License)
 
-Copyright (c) 2015 Frank Hellwig
+Copyright (c) 2016 Frank Hellwig
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

@@ -18,7 +18,7 @@ var http = require('http'),
     slice = Array.prototype.slice,
     AAD_LOGIN_HOSTNAME = 'login.windows.net',
     GRAPH_API_HOSTNAME = 'graph.windows.net',
-    DEFAULT_API_VERSION = '1.5';
+    DEFAULT_API_VERSION = '1.6';
 
 //-----------------------------------------------------------------------------
 // PUBLIC
