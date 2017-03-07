@@ -17,7 +17,9 @@ var http = require('http'),
     strformat = require('strformat'),
     slice = Array.prototype.slice,
     AAD_LOGIN_HOSTNAME = 'login.windows.net',
+    AAD_LOGIN_HOSTNAME_DE = 'login.microsoftonline.de',
     GRAPH_API_HOSTNAME = 'graph.windows.net',
+    GRAPH_API_HOSTNAME_DE = 'graph.cloudapi.de',
     DEFAULT_API_VERSION = '1.6';
 
 //-----------------------------------------------------------------------------
@@ -185,7 +187,7 @@ GraphAPI.prototype._requestWithRetry = function(method, ref, data, contentType, 
     path.push('api-version=');
     path.push(self.apiVersion);
     var options = {
-        hostname: GRAPH_API_HOSTNAME,
+        hostname: GRAPH_API_HOSTNAME_DE,
         path: path.join(''),
         method: method,
         headers: {
@@ -232,11 +234,11 @@ GraphAPI.prototype._requestAccessToken = function(callback) {
         client_id: this.clientId,
         client_secret: this.clientSecret,
         grant_type: 'client_credentials',
-        resource: 'https://' + GRAPH_API_HOSTNAME
+        resource: 'https://' + GRAPH_API_HOSTNAME_DE
     };
     var content = querystring.stringify(query);
     var options = {
-        hostname: AAD_LOGIN_HOSTNAME,
+        hostname: AAD_LOGIN_HOSTNAME_DE,
         path: '/' + this.tenant + '/oauth2/token',
         method: 'POST',
         headers: {
